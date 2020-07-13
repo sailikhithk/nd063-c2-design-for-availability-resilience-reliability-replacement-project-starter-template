@@ -1,0 +1,35 @@
+[ec2-user@ip-10-1-10-215 ~]$ mysql -h database-primary.c2xy1wldu8kg.us-east-1.rds.amazonaws.com -u admin -p udacity_DB_primary
+Enter password:
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 142
+Server version: 5.7.22 Source distribution
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create table udacity_primary(id INT PRIMARY KEY, name VARCHAR(255));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select * from udacity_primary;
+Empty set (0.00 sec)
+
+mysql> insert into udacity_primary(id, name) values(20,'first entry');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from udacity_primary;
++----+-------------+
+| id | name        |
++----+-------------+
+| 20 | first entry |
++----+-------------+
+1 row in set (0.00 sec)
+
+mysql>

@@ -1,0 +1,31 @@
++----+--------------+
+| id | name         |
++----+--------------+
+| 20 | first entry  |
+| 40 | second entry |
++----+--------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from udacity_primary;
++----+--------------+
+| id | name         |
++----+--------------+
+| 20 | first entry  |
+| 40 | second entry |
+| 60 | third entry  |
++----+--------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from udacity_primary;
++----+--------------+
+| id | name         |
++----+--------------+
+| 20 | first entry  |
+| 40 | second entry |
+| 60 | third entry  |
++----+--------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into udacity_secondary(id,name) values(10, 'first row');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql>
